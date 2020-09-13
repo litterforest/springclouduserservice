@@ -1,5 +1,6 @@
 package com.softd.archit.springcloudparentdemo.springclouduserservice.controller;
 
+import com.softd.archit.springcloudparentdemo.springclouduserservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +25,8 @@ public class UserController {
     private RestTemplate restTemplate;
 //    @Autowired
 //    private LoadBalancerClient loadBalancerClient;
+    @Autowired
+    private UserService userService;
 
     @GetMapping("/getUserOrder/{orderId}")
     public Map<String, Object> getUserOrder(@PathVariable("orderId") String orderId){
@@ -35,7 +38,8 @@ public class UserController {
 //        String host = serviceInstance.getHost();
 //        int port = serviceInstance.getPort();
 //        orderInfo = restTemplate.getForObject("http://" + host + ":" + port + "/order/getOrder/{orderId}", String.class, orderId);
-        orderInfo = restTemplate.getForObject("http://orderservice/order/getOrder/{orderId}", String.class, orderId);
+//        orderInfo = restTemplate.getForObject("http://orderservice/order/getOrder/{orderId}", String.class, orderId);
+        orderInfo = userService.getUserOrderInfo(orderId);
         resultMap.put("orderInfo", orderInfo);
         return resultMap;
     }
