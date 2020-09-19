@@ -1,6 +1,6 @@
-package com.softd.archit.springcloudparentdemo.springclouduserservice.controller;
+package com.softd.test.springcloud.userservice.controller;
 
-import com.softd.archit.springcloudparentdemo.springclouduserservice.service.UserService;
+import com.softd.test.springcloud.userservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

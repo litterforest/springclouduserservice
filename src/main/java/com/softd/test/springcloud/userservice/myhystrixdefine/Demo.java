@@ -1,4 +1,4 @@
-package com.softd.archit.springcloudparentdemo.springclouduserservice.myhystrixdefine;
+package com.softd.test.springcloud.userservice.myhystrixdefine;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;

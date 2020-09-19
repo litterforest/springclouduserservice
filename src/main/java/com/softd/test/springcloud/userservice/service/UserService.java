@@ -1,4 +1,4 @@
-package com.softd.archit.springcloudparentdemo.springclouduserservice.service;
+package com.softd.test.springcloud.userservice.service;
 
 import com.netflix.hystrix.HystrixCommandProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
